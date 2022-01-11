@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+    //테스트입ㄴ비다~~~~~
+    ///xpxpxpxp
+    //테스트야아아아ㅏ
     @Autowired //필요한 메소드 자동찾기
     private UserService service;
 
@@ -19,5 +22,5 @@ public class UserController {
         model.addAttribute("title", "로그인");
     }
 
-    //test
+
 }
