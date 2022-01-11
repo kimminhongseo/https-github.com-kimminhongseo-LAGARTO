@@ -4,120 +4,18 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-html{
-    display: block
-}
-
-.header{
+html, body {
     width: 100%;
-    z-index: 98;
-    border-bottom: 1px solid #e8e8e8;
-    border-bottom-color: rgba(0,0,0,.09);
+    height: 100%;
 }
 
-div{
-    display: block;
-}
-
-ul{
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-li{
-    list-style: none;
-    padding: 0px 0px 0px 10px;
-}
-
-.topMenu > div > ul > li > a{
-    display: inline-block;
-    font-size: 11px;
-    color: #323232;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-}
-
-li{
-    float: left;
-}
-.topMenu{
-    display: grid;
-    margin-bottom: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-}
-a{
-    text-decoration-line : none;
-    color: #000000;
-}
-
-div.topMenu > div:nth-child(1){
-    flex-direction: row;
-    justify-content: start;
-    justify-items: start;
-}
-div.topMenu > div:nth-child(2){
-    padding-left: 50%;
-    flex-direction: row;
-}
-
-.mainname{
-    display: flex;
-    padding: 30px;
-    justify-content: center;
-    justify-items: center;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-}
-.menu{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-}
-.menu > ul > li > a {
-    font-size: 13px;
-    color: #323232;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-}
-.menu > ul{
-    text-align: center;
-    vertical-align: middle;
-}
-.menu > ul > li{
-    display: inline-block;
-    padding-right: 30px;
-}
-
-body{
-    position: absolute;
+#container{
     width: 100%;
+    height: 100%;
 }
 
-.footer{
-    position: absolute;
+header{
+    background-color: orange;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to right top, #000, #fff);
+    height: 30%;
 }
-
-.footer > div{
-    text-align: end;
-    padding-right: 20px;
-}
-
-.footer > div:nth-child(1){
-    text-align: end;
-    padding-top: 25px;
-}
-
-
-
-
-
-
-
