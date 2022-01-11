@@ -15,7 +15,9 @@ public class UserController {
     private UserService service;
 
     @GetMapping("/login")
-    public void login(){}
+    public void login(Model model){
+        model.addAttribute("title", "로그인");
+    }
 
 
 }
