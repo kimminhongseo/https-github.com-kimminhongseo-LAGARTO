@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     //테스트입ㄴ비다~~~~~
     ///xpxpxpxp
-    //테스트야아아아ㅏ
+    //테스트야아아아ㅏasdsadasdadsdas
+    //Gyungi로 올리기
     @Autowired //필요한 메소드 자동찾기
     private UserService service;
 
