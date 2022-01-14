@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="logoMain"><img class="logo" src="/res/img/12345.PNG"></div>
+<div class="logoMain"><img class="logo" src="/res/img/Lagarto.PNG"></div>
 
 <form id="login" action="/user/login" method="post">
     <div>
@@ -15,7 +15,7 @@
     </div>
     <div>
         <div class="my-4" id="btnUser">
-            <button type="button" class="btn btn-outline-success">로그인</button>
+            <button type="button" class="btn btn-outline-success" id="btnLogin">로그인</button>
             <button type="button" class="btn btn-outline-success">회원가입</button>
         </div>
     </div>
@@ -34,4 +34,13 @@
         <span>아이디 찾기/</span> <span>비밀번호 찾기</span>
     </div>
 </div>
+
+<div id="test"></div>
+
+
+
+
+
+
+
 

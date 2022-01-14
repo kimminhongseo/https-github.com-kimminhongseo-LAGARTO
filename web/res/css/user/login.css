@@ -6,8 +6,7 @@
 
 .logo{
     padding: 2%;
-    width: 25%;
-    margin-right: 35px;
+    width: 15%;
 }
 
 .social{
@@ -28,6 +27,10 @@
     width: 100%;
     height: 50%;
     border: 1px solid #000;
+}
+
+#btnLogin{
+    margin-left: 5px;
 }
 
 #formId{
@@ -63,6 +66,14 @@
     display: flex;
     justify-content: center;
     justify-items: center;
+}
+
+#test{
+    float: none;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    width: 50px;
+    height: 50px;
 }
 
 
