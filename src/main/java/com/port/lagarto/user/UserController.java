@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    @Autowired
+    @Autowired //필요한 메소드 자동찾기
     private UserService service;
 
     @GetMapping("/login")
     public void login(Model model){
         model.addAttribute("title", "로그인");
     }
-
 
 }
