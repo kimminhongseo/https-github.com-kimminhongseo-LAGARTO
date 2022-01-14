@@ -10,6 +10,6 @@
 
     <definition name="*/*" extends="tiles_template">
         <put-attribute name="body" value="/WEB-INF/view/{1}/{2}.jsp"/>
-        <put-attribute name="css" value="{1}/{2}"></put-attribute>
+        <put-attribute name="Lagarto" value="{1}/{2}"></put-attribute>
     </definition>
 </tiles-definitions>
