@@ -1,8 +1,8 @@
 {
-    let btnElem = document.querySelector('#btnLogin');
+    let btnLoginElem = document.querySelector('#btnLogin');
 
-    if (btnElem){
-        btnElem.addEventListener('click', () => {
+    if (btnLoginElem){
+        btnLoginElem.addEventListener('click', () => {
            alert('실행') ;
         });
     }

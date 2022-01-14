@@ -1,4 +1,4 @@
-package com.port.def.user;
+package com.port.lagarto.user;
 
 import org.apache.ibatis.annotations.Mapper;
 
