@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    @Autowired //필요한 메소드 자동찾기
+    @Autowired
     private UserService service;
 
     @GetMapping("/login")
