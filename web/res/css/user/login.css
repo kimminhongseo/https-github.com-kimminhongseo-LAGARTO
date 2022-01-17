@@ -75,11 +75,3 @@
     width: 50px;
     height: 50px;
 }
-
-testBtn_1 {
-
-}
-
-#testBtn {  margin: 0 auto; display: flex;
-    justify-content: center;
-    justify-items: center;}
