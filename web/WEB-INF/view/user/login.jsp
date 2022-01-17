@@ -24,7 +24,11 @@
     <div class="row row-cols-2">
         <div class="col">네이버</div>
         <div class="col">카카오톡</div>
-        <div class="col">페이스북</div>
+        <div class="col" onclick="fnFbCustomLogin();">
+                <a href="javascript:void(0)">
+                    <span>Login with Facebook</span>
+                </a>
+        </div>
         <div class="col">구글</div>
     </div>
 </div>
@@ -36,6 +40,9 @@
 </div>
 
 <div id="test"></div>
+
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=250393303901626" nonce="SiOBIhLG"></script>
 
 
 
