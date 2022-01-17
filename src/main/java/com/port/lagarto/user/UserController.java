@@ -1,11 +1,10 @@
 package com.port.lagarto.user;
 
+import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -19,4 +18,18 @@ public class UserController {
         model.addAttribute("title", "로그인");
     }
 
+// <<<<<<< dyeyoung
+//     @PostMapping("/login")
+//     @ResponseBody
+//     public void loginProc(@RequestBody UserEntity entity){
+//         service.insUser(entity);
+//     }
+
+//     @GetMapping("/join")
+//     public void join(Model model){
+//         model.addAttribute("title", "회원가입");
+//     }
+
+// =======
+// >>>>>>> master
 }
