@@ -17,4 +17,6 @@
         LEFT JOIN lagarto_user B ON A.iuser = B.iuser
         ORDER BY A.iboard DESC
     </select>
+
+
 </mapper>

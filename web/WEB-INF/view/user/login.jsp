@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="logoMain"><img class="logo" src="/res/img/Lagarto.PNG"></div>
+<div class="logoMain"><img class="logo" src="/res/img/lagarto_logo.svg"></div>
 
 <form id="login" action="/user/login" method="post">
     <div>
