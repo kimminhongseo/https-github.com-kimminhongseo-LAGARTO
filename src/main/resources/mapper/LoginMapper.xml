@@ -9,10 +9,10 @@
     </insert>
 
     <select id="selUser" resultType="UserEntity">
-        SELECT * FROM t_user
+        SELECT * FROM t_user WHERE email = #{email}
     </select>
 
     <insert id="facebookIns">
-        UPDATE t_user SET nickname = #{nickname} WHERE iuser = #{iuser}
+        UPDATE t_user SET nickname = #{nickname} WHERE iuser = #{iuser};
     </insert>
 </mapper>

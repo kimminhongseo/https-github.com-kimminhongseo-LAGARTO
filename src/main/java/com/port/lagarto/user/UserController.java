@@ -27,7 +27,6 @@ public class UserController {
      @ResponseBody
      public void loginProc(@RequestBody UserEntity entity){
          service.insUser(entity);
-         System.out.println(entity.getIuser());
      }
 
      @GetMapping("/join")
@@ -37,6 +36,7 @@ public class UserController {
 
     @PostMapping("/join")
     public void joinProc(UserEntity entity){
+        System.out.println(entity.getNickname());
         service.facebookIns(entity);
     }
 
