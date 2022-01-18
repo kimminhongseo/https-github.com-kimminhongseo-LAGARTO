@@ -18,15 +18,18 @@ public class UserController {
         model.addAttribute("title", "로그인");
     }
 
-    @PostMapping("/login")
-    @ResponseBody
-    public void loginProc(@RequestBody UserEntity entity){
-        service.insUser(entity);
-    }
+// <<<<<<< dyeyoung
+//     @PostMapping("/login")
+//     @ResponseBody
+//     public void loginProc(@RequestBody UserEntity entity){
+//         service.insUser(entity);
+//     }
 
-    @GetMapping("/join")
-    public void join(Model model){
-        model.addAttribute("title", "회원가입");
-    }
+//     @GetMapping("/join")
+//     public void join(Model model){
+//         model.addAttribute("title", "회원가입");
+//     }
 
+// =======
+// >>>>>>> master
 }
