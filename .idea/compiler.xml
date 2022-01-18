@@ -13,7 +13,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="def_KYHS" options="--add-exports java.base/sun.security.ssl=ALL-UNNAMED" />
+      <module name="def_KYHS" options="" />
     </option>
   </component>
 </project>

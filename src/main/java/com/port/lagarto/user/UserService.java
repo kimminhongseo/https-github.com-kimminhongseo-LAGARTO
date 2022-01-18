@@ -1,11 +1,11 @@
 package com.port.lagarto.user;
 
+
+import com.port.lagarto.Utils;
 import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.social.facebook.api.User;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpSession;
 
 @Service
 public class UserService {
@@ -14,7 +14,8 @@ public class UserService {
     private UserMapper mapper;
 
     @Autowired
-    private HttpSession hs;
+    private Utils utils;
+
 
     public int insUser(UserEntity entity){
         return mapper.insUser(entity);
@@ -24,4 +25,8 @@ public class UserService {
         return mapper.selUser(entity);
     }
 
+    public int facebookIns(UserEntity entity){
+        entity.setIuser(utils.getLoginUserPk());
+        return mapper.facebookIns(entity);
+    }
 }

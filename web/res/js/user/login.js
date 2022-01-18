@@ -19,6 +19,7 @@
                 FB.api('/me', 'get', {fields: 'name,email'}, function(r) {
                     let url = '/user/login';
                     console.log(r);
+
                     fetch(url, {
                         method : 'post',
                         headers : {'Content-type' : 'application/json'},
@@ -26,7 +27,7 @@
                     }).then(function (res){
                         return res.json();
                     })
-                    location.href = "http://localhost:8090/user/join";
+                    location.href = "/user/join";
                 })
             } else if (response.status === 'not_authorized') {
                 // 사람은 Facebook에 로그인했지만 앱에는 로그인하지 않았습니다.
