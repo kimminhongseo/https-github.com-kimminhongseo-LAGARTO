@@ -18,7 +18,7 @@ public class UserController {
         model.addAttribute("title", "로그인");
     }
 
-<<<<<<< dyeyoung
+
     @PostMapping("/login")
     @ResponseBody
     public void loginProc(@RequestBody UserEntity entity){
@@ -30,6 +30,4 @@ public class UserController {
         model.addAttribute("title", "회원가입");
     }
 
-=======
->>>>>>> master
 }
