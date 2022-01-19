@@ -23,7 +23,6 @@ public class UserController {
     }
 
 
-
      @PostMapping("/login")
      @ResponseBody
      public String loginProc(@RequestBody UserEntity entity){
@@ -47,17 +46,3 @@ public class UserController {
     }
 
 }
-
-    @PostMapping("/login")
-    @ResponseBody
-    public void loginProc(@RequestBody UserEntity entity){
-        service.insUser(entity);
-    }
-
-    @GetMapping("/join")
-    public void join(Model model){
-        model.addAttribute("title", "회원가입");
-    }
-
-}
-
