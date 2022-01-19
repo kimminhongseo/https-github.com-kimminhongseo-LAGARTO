@@ -44,7 +44,7 @@
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="def_KYHS/web/Web" />
+      <element id="javaee-facet-resources" facet="LAGARTO/web/Web" />
     </root>
   </artifact>
 </component>
