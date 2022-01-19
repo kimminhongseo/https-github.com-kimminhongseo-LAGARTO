@@ -23,7 +23,7 @@
 <div class="social">
     <div class="row row-cols-2">
         <div class="col">네이버</div>
-        <div class="col">카카오톡</div>
+        <div class="col"><a href="javascript:loginWithKakao()"><img src="/res/img/kakao_login_medium.png"></a></div>
         <div class="col">페이스북</div>
         <div class="col">구글</div>
     </div>
@@ -37,9 +37,9 @@
 <div id="test"></div>
 
 
+<div><button onclick="kakaoLogout()">카카오 로그아웃</button></div>
 
-
-
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
 
 
