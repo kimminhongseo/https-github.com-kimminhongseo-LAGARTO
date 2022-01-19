@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="logoMain"><img class="logo" src="/res/img/lagarto_logo.svg"></div>
+<div class="logoMain"><img class="logo" src="/res/img/Lagarto.PNG"></div>
 
 <form id="login" action="/user/login" method="post">
     <div>
@@ -24,7 +24,11 @@
     <div class="row row-cols-2">
         <div class="col">네이버</div>
         <div class="col"><a href="javascript:loginWithKakao()"><img src="/res/img/kakao_login_medium.png"></a></div>
-        <div class="col">페이스북</div>
+        <div class="col" onclick="fnFbCustomLogin();">
+            <a href="javascript:void(0)">
+                <span>Login with Facebook</span>
+            </a>
+        </div>
         <div class="col">구글</div>
     </div>
 </div>
@@ -34,11 +38,12 @@
         <span>아이디 찾기/</span> <span>비밀번호 찾기</span>
     </div>
 </div>
-<div id="test"></div>
 
-
+<div class="fb-login-button" data-width="" data-size="small" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false"></div>
 <div><button onclick="kakaoLogout()">카카오 로그아웃</button></div>
 
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=250393303901626" nonce="SiOBIhLG"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
 
