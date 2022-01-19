@@ -25,8 +25,13 @@ public class UserController {
 
      @PostMapping("/login")
      @ResponseBody
-     public void loginProc(@RequestBody UserEntity entity){
-         service.insUser(entity);
+     public String loginProc(@RequestBody UserEntity entity){
+        UserEntity dbentity = service.selUser(entity);
+        if (dbentity == null){
+            service.insUser(entity);
+            return "redirect:/user/join";
+        }
+         return "redirect:/page/main";
      }
 
      @GetMapping("/join")

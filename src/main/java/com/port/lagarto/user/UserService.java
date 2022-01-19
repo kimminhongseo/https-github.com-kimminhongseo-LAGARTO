@@ -5,6 +5,7 @@ import com.port.lagarto.Const;
 import com.port.lagarto.Utils;
 import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.facebook.api.User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
