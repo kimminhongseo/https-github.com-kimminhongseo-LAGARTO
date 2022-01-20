@@ -10,7 +10,7 @@
         naver_id_login.setPopup();
         naver_id_login.init_naver_id_login();
 
-
+    //로그인 > 정보 넘어옴 >
     //api 네이버 로그인 버튼script
 
         //callback

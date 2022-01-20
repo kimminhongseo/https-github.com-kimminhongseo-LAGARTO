@@ -1,0 +1,41 @@
+
+
+
+-- 경매 쿼리문
+CREATE TABLE auction(
+
+  iboard INT unsigned NOT NULL AUTO_INCREMENT,
+  writer INT unsigned NOT NULL ,
+  icategory INT unsigned not NULL ,
+  title VARCHAR(50) not NULL ,
+  ctnt TEXT not NULL ,
+  images VARCHAR(200),
+  hits  INT UNSIGNED NOT NULL DEFAULT 0,
+  isdel TINYINT UNSIGNED DEFAULT 0,
+  buy INT unsigned  NOT NULL,
+  imbuy INT unsigned  NOT NULL,
+  rdt DATETIME DEFAULT current_timestamp ,
+  mdt DATETIME DEFAULT current_timestamp ,
+  	PRIMARY KEY(iboard)
+
+);
+
+--경매_댓글
+CREATE TABLE auction_cmt(
+        icmt INT  unsigned NOT NULL AUTO_INCREMENT,
+        iboard INT UNSIGNED NOT null,
+        iuser INT  UNSIGNED NOT null,
+        ctnt TEXT not NULL ,
+        rdt DATETIME DEFAULT current_timestamp ,
+        mdt DATETIME DEFAULT CURRENT_TIMESTAMP ,
+        PRIMARY KEY(icmt);
+);
+
+
+--경매_좋아요 여부 (찜하기로 넘어가야하지 않을까)
+CREATE TABLE auction_fav(
+        iboard INT UNSIGNED,
+        iuser INT UNSIGNED,
+        rdt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (iboard, iuser)
+);
