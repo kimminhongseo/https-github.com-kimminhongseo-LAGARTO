@@ -12,7 +12,6 @@
         SELECT * FROM t_user WHERE email = #{email}
     </select>
 
-
     <insert id="facebookIns">
         UPDATE t_user SET nickname = #{nickname} WHERE iuser = #{iuser};
     </insert>

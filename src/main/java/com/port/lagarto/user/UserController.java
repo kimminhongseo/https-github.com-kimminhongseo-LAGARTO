@@ -1,11 +1,16 @@
 package com.port.lagarto.user;
 
 import com.port.lagarto.Utils;
+import com.port.lagarto.enums.JoinResult;
 import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Controller
@@ -15,10 +20,15 @@ public class UserController {
     private UserService service;
 
     @GetMapping("/login")
-    public void login(Model model){
+    public void login(Model model) {
         model.addAttribute("title", "로그인");
     }
 
+    @PostMapping("/login")
+    @ResponseBody
+    public void loginProc(@RequestBody UserEntity entity) {
+        service.insUser(entity);
+    }
 
 
      @PostMapping("/login")
@@ -33,15 +43,48 @@ public class UserController {
          return 0;
      }
 
-     @GetMapping("/join")
-     public void join(Model model){
-         model.addAttribute("title", "회원가입");
-     }
+    @GetMapping("/certification")
+    public void certification() {
+
+    }
+
+    @ResponseBody
+    @PostMapping("/certification")
+    public Map<String, Integer> certificationProc(@ModelAttribute("userEntity") UserEntity entity) {
+        Map<String, Integer> result = new HashMap<>();
+
+        // 중복된 번호
+        int contactCheck = 0;
+
+        service.contactCheck(entity);
+        JoinResult joinRslt = entity.getResult();
+
+        // 사용 가능한 번호
+        if (joinRslt == JoinResult.AVAILABLE_CONTACT) {
+            contactCheck = 1;
+        }
+
+        result.put("result", contactCheck);
+        System.out.println("result : " + contactCheck);
+        return result;
+    }
+
+    @GetMapping("/join")
+    public String join(@ModelAttribute("userEntity") UserEntity entity, RedirectAttributes reAttr, Model model) {
+        if (entity.getResult() == JoinResult.AVAILABLE_CONTACT) {
+            model.addAttribute("title", "회원가입");
+            return "/user/join";
+        }
+        reAttr.addFlashAttribute("err", "휴대전화 인증을 먼저 해주세요.");
+        return "redirect:/user/certification";
+    }
 
     @PostMapping("/join")
-    public void joinProc(UserEntity entity){
+    public void joinProc(UserEntity entity) {
         System.out.println(entity.getNickname());
         service.facebookIns(entity);
     }
 
+
 }
+

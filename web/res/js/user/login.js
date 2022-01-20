@@ -1,30 +1,48 @@
 {
     let btnLoginElem = document.querySelector('#btnLogin');
 
-    if (btnLoginElem){
+    if (btnLoginElem) {
         btnLoginElem.addEventListener('click', () => {
-           alert('실행') ;
+            alert('실행');
         });
     }
 
-//기존 로그인 상태를 가져오기 위해 Facebook에 대한 호출
-    function statusChangeCallback(res){
+
+    // 휴대전화 인증 페이지 (/user/certification) 이동
+    let btnJoinElem = document.querySelector('#btnJoin');
+
+    if (btnJoinElem) {
+        btnJoinElem.addEventListener('click', () => {
+            openJoinWin();
+        })
+    }
+
+    function openJoinWin() {
+        window.open(
+            "/user/certification",
+            "_blank",
+            "width=800, height=700, location=no, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
+    }
+
+
+    //기존 로그인 상태를 가져오기 위해 Facebook에 대한 호출
+    function statusChangeCallback(res) {
         statusChangeCallback(response);
     }
 
 
-    function fnFbCustomLogin(){
-        FB.login(function(response) {
+    function fnFbCustomLogin() {
+        FB.login(function (response) {
             if (response.status === 'connected') {
-                FB.api('/me', 'get', {fields: 'name,email'}, function(r) {
+                FB.api('/me', 'get', {fields: 'name,email'}, function (r) {
                     let url = '/user/login';
                     console.log(r);
 
                     fetch(url, {
-                        method : 'post',
-                        headers : {'Content-type' : 'application/json'},
-                        body : JSON.stringify(r)
-                    }).then(function (res){
+                        method: 'post',
+                        headers: {'Content-type': 'application/json'},
+                        body: JSON.stringify(r)
+                    }).then(function (res) {
                         return res.json();
                     })
                     location.href = "/user/join";
@@ -39,7 +57,7 @@
         }, {scope: 'public_profile,email'});
     }
 
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
             appId      : '100077093453861', // 내 앱 ID를 입력한다.
             cookie     : true,
