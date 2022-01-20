@@ -28,6 +28,7 @@ public class UserService {
         try {
             result = mapper.selUser(entity);
             if (result == null){
+                entity.setUpw(Utils.randomPw());
                 mapper.insUser(entity);
                 result = mapper.selUser(entity);
             }
@@ -43,7 +44,6 @@ public class UserService {
     }
 
     public int facebookIns(UserEntity entity){
-        System.out.println(utils.getLoginUserPk());
         entity.setIuser(utils.getLoginUserPk());
         return mapper.facebookIns(entity);
     }

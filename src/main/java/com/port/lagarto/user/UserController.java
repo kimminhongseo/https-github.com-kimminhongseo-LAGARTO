@@ -1,7 +1,9 @@
 package com.port.lagarto.user;
 
+
 import com.port.lagarto.Utils;
 import com.port.lagarto.model.UserEntity;
+import jdk.jshell.execution.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,13 +27,14 @@ public class UserController {
 
      @PostMapping("/login")
      @ResponseBody
-     public String loginProc(@RequestBody UserEntity entity){
+     public int loginProc(@RequestBody UserEntity entity){
         UserEntity dbentity = service.selUser(entity);
         if (dbentity == null){
             service.insUser(entity);
-            return "redirect:/user/join";
+            return 1;
         }
-         return "redirect:/page/main";
+         Utils.randomPw();
+         return 0;
      }
 
      @GetMapping("/join")
@@ -40,9 +43,10 @@ public class UserController {
      }
 
     @PostMapping("/join")
-    public void joinProc(UserEntity entity){
+    public String joinProc(UserEntity entity){
         System.out.println(entity.getNickname());
         service.facebookIns(entity);
+        return "/page/main";
     }
 
 }

@@ -26,8 +26,16 @@
                         body : JSON.stringify(r)
                     }).then(function (res){
                         return res.json();
-                    })
-                    location.href = "/user/join";
+                    }).then(hh => {
+                        switch (hh){
+                            case 1:
+                                location.href = "http://localhost:8090/user/join"
+                                break;
+                            case 0:
+                                location.href = "http://localhost:8090/page/main"
+                                break;
+                        }
+                    });
                 })
             } else if (response.status === 'not_authorized') {
                 // 사람은 Facebook에 로그인했지만 앱에는 로그인하지 않았습니다.
@@ -41,12 +49,13 @@
 
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : '250393303901626', // 내 앱 ID를 입력한다.
+            appId      : '612308656721361', // 내 앱 ID를 입력한다.
             cookie     : true,
             xfbml      : true,
             version    : 'v12.0'
         });
         FB.AppEvents.logPageView();
     };
+
 
 }

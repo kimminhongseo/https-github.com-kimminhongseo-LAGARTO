@@ -3,14 +3,15 @@
 <mapper namespace="com.port.lagarto.user.UserMapper">
     <insert id="insUser" useGeneratedKeys="true" keyProperty="iuser">
         INSERT INTO t_user
-        (iuser, email, name)
+        (iuser, email, name, upw)
         VALUES
-        (#{iuser}, #{email}, #{name})
+        (#{iuser}, #{email}, #{name}, #{upw})
     </insert>
 
     <select id="selUser" resultType="UserEntity">
         SELECT * FROM t_user WHERE email = #{email}
     </select>
+
 
     <insert id="facebookIns">
         UPDATE t_user SET nickname = #{nickname} WHERE iuser = #{iuser};
