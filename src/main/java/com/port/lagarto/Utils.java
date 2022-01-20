@@ -46,17 +46,6 @@ public class Utils {
         return encrypted;
     }
 
-    //랜덤으로 비밀번호 주기
-    public static String randomPw(){
-        String password = "";
-        for (int i = 0; i<=12;i++){
-            int rNum = (int)(Math.random() * 10);
-            String strNum = Integer.toString(rNum);
-            password += strNum;
-        }
-        String encrypted = BCrypt.hashpw(password, BCrypt.gensalt());
-        return encrypted;
-    }
 
     //id 뒷자리 4번째부터 *로치환
     public static String subString(String str) {
