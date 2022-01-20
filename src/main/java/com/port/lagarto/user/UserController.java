@@ -1,11 +1,11 @@
 package com.port.lagarto.user;
 
-import com.port.lagarto.Utils;
-import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 
 
 @Controller
@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired //필요한 메소드 자동찾기
     private UserService service;
-
-    @Autowired
-    private Utils utils;
 
     @GetMapping("/login")
     public void login(Model model){
@@ -48,5 +45,3 @@ public class UserController {
     }
 
 }
-
-

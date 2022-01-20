@@ -2,12 +2,10 @@ package com.port.lagarto;
 
 import com.port.lagarto.Const;
 import com.port.lagarto.model.UserEntity;
-import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 
 @Component
 public class Utils {
@@ -35,23 +33,9 @@ public class Utils {
                 .replace("'", "&#39");
     }
 
-    //랜덤으로 비밀번호 주기
-    public static String randomPw(){
-        String password = "";
-        for (int i = 0; i<=12;i++){
-            int rNum = (int)(Math.random() * 10);
-            String strNum = Integer.toString(rNum);
-            password += strNum;
-        }
-        String encrypted = BCrypt.hashpw(password, BCrypt.gensalt());
-        return encrypted;
-    }
 
     //id 뒷자리 4번째부터 *로치환
     public static String subString(String str) {
         return str.substring(0, 4) + str.substring(4).replaceAll("\\S", "*");
     }
-
-
 }
-

@@ -10,4 +10,5 @@
     <div>
         <div><input type="submit" value="가입"></div>
     </div>
+<<<<<<< HEAD
 </form>
