@@ -43,7 +43,7 @@
 <div><button onclick="kakaoLogout()">카카오 로그아웃</button></div>
 
 
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=250393303901626" nonce="SiOBIhLG"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=100077093453861" nonce="SiOBIhLG"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
 

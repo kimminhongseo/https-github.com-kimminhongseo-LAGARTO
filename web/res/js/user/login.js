@@ -41,7 +41,7 @@
 
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : '250393303901626', // 내 앱 ID를 입력한다.
+            appId      : '100077093453861', // 내 앱 ID를 입력한다.
             cookie     : true,
             xfbml      : true,
             version    : 'v12.0'
