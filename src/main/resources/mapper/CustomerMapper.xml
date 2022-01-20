@@ -8,4 +8,5 @@
         WHERE A.board_type = ${board_type}
         ORDER BY A.iboard DESC
     </select>
+
 </mapper>
