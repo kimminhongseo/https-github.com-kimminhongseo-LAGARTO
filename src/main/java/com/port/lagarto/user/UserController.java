@@ -1,9 +1,7 @@
 package com.port.lagarto.user;
 
-
 import com.port.lagarto.Utils;
 import com.port.lagarto.model.UserEntity;
-import jdk.jshell.execution.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +23,7 @@ public class UserController {
     }
 
 
+
      @PostMapping("/login")
      @ResponseBody
      public int loginProc(@RequestBody UserEntity entity){
@@ -43,10 +42,11 @@ public class UserController {
      }
 
     @PostMapping("/join")
-    public String joinProc(UserEntity entity){
+    public void joinProc(UserEntity entity){
         System.out.println(entity.getNickname());
         service.facebookIns(entity);
-        return "/page/main";
     }
 
 }
+
+
