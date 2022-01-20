@@ -5,6 +5,7 @@ import com.port.lagarto.Const;
 import com.port.lagarto.Utils;
 import com.port.lagarto.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.facebook.api.User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
@@ -27,6 +28,7 @@ public class UserService {
         try {
             result = mapper.selUser(entity);
             if (result == null){
+                entity.setUpw(Utils.randomPw());
                 mapper.insUser(entity);
                 result = mapper.selUser(entity);
             }
@@ -42,7 +44,6 @@ public class UserService {
     }
 
     public int facebookIns(UserEntity entity){
-        System.out.println(utils.getLoginUserPk());
         entity.setIuser(utils.getLoginUserPk());
         return mapper.facebookIns(entity);
     }

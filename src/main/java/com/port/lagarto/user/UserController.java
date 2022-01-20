@@ -26,8 +26,14 @@ public class UserController {
 
      @PostMapping("/login")
      @ResponseBody
-     public void loginProc(@RequestBody UserEntity entity){
-         service.insUser(entity);
+     public int loginProc(@RequestBody UserEntity entity){
+        UserEntity dbentity = service.selUser(entity);
+        if (dbentity == null){
+            service.insUser(entity);
+            return 1;
+        }
+         Utils.randomPw();
+         return 0;
      }
 
      @GetMapping("/join")
@@ -42,4 +48,5 @@ public class UserController {
     }
 
 }
+
 
