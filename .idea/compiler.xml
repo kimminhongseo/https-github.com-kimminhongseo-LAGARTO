@@ -10,5 +10,8 @@
         <module name="def_KYHS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LAGARTO" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
