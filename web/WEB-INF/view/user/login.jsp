@@ -16,7 +16,7 @@
     <div>
         <div class="my-4" id="btnUser">
             <button type="button" class="btn btn-outline-success" id="btnLogin">로그인</button>
-            <button type="button" class="btn btn-outline-success">회원가입</button>
+            <button type="button" class="btn btn-outline-success" id="btnJoin">회원가입</button>
         </div>
     </div>
 </form>

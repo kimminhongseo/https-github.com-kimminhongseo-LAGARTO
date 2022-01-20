@@ -14,7 +14,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="def_KYHS" options="" />
+      <module name="LAGARTO" options="" />
     </option>
   </component>
 </project>
