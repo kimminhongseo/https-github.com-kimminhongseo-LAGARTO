@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="def_KYHS:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/def_KYHS_war_exploded</output-path>
+  <artifact type="exploded-war" name="LAGARTO:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/LAGARTO_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="def_KYHS" />
+          <element id="module-output" name="LAGARTO" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.30.RELEASE" />
@@ -61,7 +61,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.0.4" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="def_KYHS/web/Web" />
+      <element id="javaee-facet-resources" facet="LAGARTO/web/Web" />
     </root>
   </artifact>
 </component>

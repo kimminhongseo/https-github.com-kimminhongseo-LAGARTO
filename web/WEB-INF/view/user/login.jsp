@@ -24,11 +24,7 @@
     <div class="row row-cols-2">
         <div class="col">네이버</div>
         <div class="col">카카오톡</div>
-        <div class="col" onclick="fnFbCustomLogin();">
-                <a href="javascript:void(0) ">
-                    <span >Login with Facebook</span>
-                </a>
-        </div>
+        <div class="col">페이스북</div>
         <div class="col">구글</div>
     </div>
 </div>
@@ -39,15 +35,12 @@
     </div>
 </div>
 
-<div class="fb-login-button" data-width="" data-size="small" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false"></div>
-
-
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=612308656721361" nonce="SiOBIhLG"></script>
+<div id="test"></div>
 
 
 
-
-
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v12.0&appId=100077093453861" nonce="SiOBIhLG"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 
 
 
